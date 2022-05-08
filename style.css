@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fredoka One',sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Nav */
+:root{
+    --color-1: #3277a8;
+}
+
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.containers{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+/*headers*/
+.headers{
+	background-color: var(--color-1);
+	padding: 12px 0;
+	line-height: 1.5;
+}
+
+.headers .logo,
+.headers .nav{
+	padding:0 15px;
+}
+.headers .logo a{
+	font-size: 20px;
+	color: #ffffff;
+	text-transform: capitalize;
+    font-family: 'Ubuntu', cursive;
+    letter-spacing: 1px;
+}
+.headers .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.headers .nav ul li a{
+	display: block;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	padding: 10px 0;
+	transition: all 0.5s ease;
+}
+.headers .nav ul li a.active,
+.headers .nav ul li a:hover{
+    text-shadow: 0 0 10px white;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	border:none;
+	display: none;
+	margin-right: 15px;
+}
+.nav-toggler:focus{
+	outline: none;
+	box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.nav-toggler span{
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-1);
+    display: block;
+    margin:auto;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nav-toggler.active span{
+	background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-1);
+	transition: all 0.3s ease;
+}
+.nav-toggler span::before{
+	transform: translateY(-6px);
+}
+.nav-toggler.active span::before{
+	transform: rotate(45deg);
+}
+.nav-toggler span::after{
+	transform: translateY(6px);
+}
+.nav-toggler.active span::after{
+	transform: rotate(135deg);
+}
+@media(max-width:991px){
+    .nav-toggler{
+        display: block;
+    }
+    .headers .nav{
+        width: 100%;
+        padding:0;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+    .headers .nav.open{
+        visibility: visible;
+    }
+    .headers .nav ul{
+        padding:12px 15px 0;
+        margin-top: 12px;
+        border-top:1px solid rgba(255,255,255,0.2);
+        z-index: 1;
+    }
+    .headers .nav ul li{
+        display: block;
+        margin:0;
+    }
+}
+
+
+.header {
+    margin-top: 50px;
+    margin-bottom: -20px;
+    margin-left: 20%;
+    padding-bottom: 15px;
+    color: #3277a8;
+    border-bottom: 2px solid rgba(50, 119, 168, 0.7);
+    margin-right: 25%;
+}
+
+@media(max-width:667px){
+    .header {
+        width: 60%;
+        margin: 50px auto;
+        margin-bottom: -30px;
+        padding-bottom: 15px;
+        color: #3277a8;
+        text-align: center;
+        border-bottom: 2px solid rgba(50, 119, 168, 0.7);
+        font-size: 15px;
+    }
+}
+
+.quran-list {
+    display: grid;
+    width: 60%;
+    margin: 50px auto;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 20px;
+}
+
+.quran-list-box {
+    text-align: center;
+}
+
+@media(max-width:667px){
+    .quran-list {
+        width: 67%;
+    }
+}
+
+
+.quran-list-box a {
+    display: block;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a6a6a6;
+    transition: all 0.4s;
+    background-color: white;
+}
+
+.quran-list-box a:hover {
+    background-color: #3277a8;
+    color: white;
+}
+
+a {
+    vertical-align: baseline;
+    text-decoration: none;
+    color: #3277a8;
+    cursor: pointer;
+}
+
+.quran-list-box a span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.header-surah {
+    width: 35%;
+    margin: 50px auto;
+    padding-bottom: 15px;
+    color: #3277a8;
+    text-align: center;
+    border-bottom: 2px solid rgba(50, 119, 168, 0.7);
+}
+
+.nama-surat {
+    text-align: center;
+    font-size: 32px;
+}
+.arti-surat {
+    text-align: center;
+    font-size: 20px;
+}
+.jumlah-ayat {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+.bismillah {
+    width: 35%;
+    margin: 50px auto;
+    padding-bottom: 15px;
+    color: #3277a8;
+    text-align: center;
+    font-size: 35px;
+    margin-top: -30px;
+}
+
+li {
+    list-style: none;
+}
+
+.baris {
+    margin: auto;
+    width: 100%;
+}
+
+.arab {
+    width: 70%;
+    color: #3277a8;
+    font-size: 50px;
+    margin: 10px auto;
+    text-align: right;
+    margin-bottom: 2%;
+}
+.latin {
+    width: 70%;
+    color: #69addd;
+    font-size: 15px;
+    margin: 10px auto;
+    text-align: right;
+    margin-bottom: 2%;
+}
+.arti {
+    width: 70%;
+    color: #3277a8;
+    font-size: 20px;
+    margin: 10px auto;
+    text-align: left;
+    margin-bottom: 10%;
+    padding-bottom: 2%;
+    border-bottom: 1px #69addd dotted;
+}
+
+.updraft {
+    width: 50px;
+    height: 50px;
+    margin-left: 90%;
+    margin-top: 800px;
+    position: fixed;
+    transform: rotate(-90deg);
+    background-color: #69addd;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #3277a8;
+}
+
+.updraft img {
+    height: 50px;
+    width: 50px;
+}
+
+.updraft:hover{
+    background-color: #3277a8;
+}
