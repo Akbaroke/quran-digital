@@ -148,6 +148,9 @@ a{
     }
 }
 
+.container {
+    z-index: -9999;
+}
 
 .header {
     margin-top: 50px;
